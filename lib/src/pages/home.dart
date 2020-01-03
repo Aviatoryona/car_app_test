@@ -1,3 +1,5 @@
+import 'package:car_app_test/src/pages/7DaysIntensiveCourse_page.dart';
+import 'package:car_app_test/src/pages/drivingCourse_page.dart';
 import 'package:car_app_test/src/pages/hireCar_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -108,12 +110,8 @@ class _MyHomePageState extends State<MyHomePage> {
         body:TabBarView(
           children: <Widget>[
             HireCar(this._scrollBottomController),
-            Container(
-              color: Colors.green,
-            ),
-            Container(
-              color: Colors.teal,
-            ),
+            DrivingCourse(this._scrollBottomController),
+            IntensiveCourse(this._scrollBottomController)
           ],
         ),
         backgroundColor: Colors.white,
