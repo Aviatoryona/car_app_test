@@ -1,6 +1,7 @@
 import 'package:car_app_test/src/pages/7DaysIntensiveCourse_page.dart';
 import 'package:car_app_test/src/pages/drivingCourse_page.dart';
 import 'package:car_app_test/src/pages/hireCar_page.dart';
+import 'package:car_app_test/src/pages/profile_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -24,6 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void initState() { 
     super.initState();
     myScroll();
+    
     
   }
   @override
@@ -235,6 +237,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   print('in schedule');
                }else{
                  print('in me');
+                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProfilePage()));
                }
                });
              },
