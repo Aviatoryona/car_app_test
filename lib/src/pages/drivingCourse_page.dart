@@ -20,7 +20,16 @@ class DrivingCourse extends StatelessWidget {
                       padding: const EdgeInsets.only(left: 15,right: 15,top: 20),
                       child: Column(
                         children: <Widget>[
-                          Text("₤4",textAlign: TextAlign.left,style: TextStyle(color: Colors.amber,fontSize: 20),),
+                          Column(
+                            children: <Widget>[
+                              Row(
+                                children: <Widget>[
+                                  Text("₤4",textAlign: TextAlign.left,style: TextStyle(color: Colors.amber,fontSize: 20),),
+                                ],
+                              ),
+                              Divider(height: 5,)
+                            ],
+                          ),
                           SizedBox(height: 10,),
                           
                           Row(
@@ -67,6 +76,7 @@ class DrivingCourse extends StatelessWidget {
                                 color: Colors.amber,
                                 child: Text('Claim job.'),
                                 onPressed: (){},
+                                shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                               )
                             ],
                           )
@@ -88,7 +98,17 @@ class DrivingCourse extends StatelessWidget {
               padding: const EdgeInsets.only(left: 15,right: 15,top: 20),
               child: Column(
                 children: <Widget>[
-                  Text("₤236",textAlign: TextAlign.left,style: TextStyle(color: Colors.amber,fontSize: 20),),
+                  Column(
+                    children: <Widget>[
+                      Row(
+                        children: <Widget>[
+                          Text("₤236",textAlign: TextAlign.left,style: TextStyle(color: Colors.amber,fontSize: 20),),
+                        ],
+                      ),
+                       Divider(height: 5,)
+                    ],
+                   
+                  ),
                   SizedBox(height: 10,),
                   
                   Row(
@@ -134,7 +154,9 @@ class DrivingCourse extends StatelessWidget {
                       FlatButton(
                         color: Colors.amber,
                         child: Text('Claim job.'),
+                        shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                         onPressed: (){},
+
                       )
                     ],
                   )

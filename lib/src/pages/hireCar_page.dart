@@ -30,7 +30,7 @@ class HireCar extends StatelessWidget {
                                   Text("₤1821",textAlign: TextAlign.left,style: TextStyle(color: Colors.amber,fontSize: 20),),
                                 ],
                               ),
-                               Divider(height: 10,color: Colors.black,)
+                               Divider(height: 5)
                             ],
                           ),
                           SizedBox(height: 10,),
@@ -123,7 +123,7 @@ class HireCar extends StatelessWidget {
                                   Text("₤1821",textAlign: TextAlign.left,style: TextStyle(color: Colors.amber,fontSize: 20),),
                                 ],
                               ),
-                               Divider(height: 10,color: Colors.black,)
+                               Divider(height: 5)
                             ],
                           ),
                           SizedBox(height: 10,),
