@@ -1,4 +1,4 @@
-import 'package:car_app_test/src/pages/home.dart';
+import 'package:car_app_test/src/pages/landing_page.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -11,9 +11,10 @@ class MyApp extends StatelessWidget {
       title: 'Instructor CarForDrivingTest',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.blueGrey,
+        primaryColor: Colors.black
       ),
-      home: MyHomePage(),
+      home: LandingPage()
     );
   }
 }
