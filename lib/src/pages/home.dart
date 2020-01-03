@@ -78,13 +78,13 @@ class _MyHomePageState extends State<MyHomePage> {
           bottom: _showAppBar ?TabBar(
           tabs: <Widget>[
             Tab(
-              child: Text('HIRE A CAR'),
+              child: Text('HIRE A CAR',style: TextStyle(fontSize: 12),),
             ),
             Tab(
-             child: Text( 'DRIVING COURSE'),
+             child: Text( 'DRIVING COURSE',style: TextStyle(fontSize: 12),),
             ),
             Tab(
-             child: Text('7 DAYS INTENSIVE COURSE',),
+             child: Text('7 DAYS INTENSIVE COURSE',style: TextStyle(fontSize: 12),),
             )
           ],
           labelColor: Colors.white,

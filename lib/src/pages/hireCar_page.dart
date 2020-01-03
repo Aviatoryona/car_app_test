@@ -94,6 +94,7 @@ class HireCar extends StatelessWidget {
                                 color: Colors.amber,
                                 child: Text('Claim job.'),
                                 onPressed: (){},
+                                shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                               )
                             ],
                           )
@@ -186,6 +187,7 @@ class HireCar extends StatelessWidget {
                                 color: Colors.amber,
                                 child: Text('Claim job.'),
                                 onPressed: (){},
+                                shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                               )
                             ],
                           )

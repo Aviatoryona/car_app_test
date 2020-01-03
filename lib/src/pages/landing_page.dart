@@ -32,8 +32,11 @@ class LandingPage extends StatelessWidget {
                   Text('We'),
                   SizedBox(width: 5,),
                   Text('Connect',style: TextStyle(fontSize: 20,color: Colors.amber),),
+                  
                 ],
-              )
+              ),
+              SizedBox(height: 60,),
+              Text('Tap to continue',style: TextStyle(color: Colors.grey[400]),)
               
             ],
             )
