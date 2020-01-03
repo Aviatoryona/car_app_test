@@ -11,6 +11,9 @@ class IntensiveCourse extends StatelessWidget {
       controller: _controller,
       children: <Widget>[
         Card(
+                       shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        ),
                     elevation: 10,
                     margin: EdgeInsets.all(20),
                     child: Padding(
@@ -75,6 +78,9 @@ class IntensiveCourse extends StatelessWidget {
 
               //second card 
       Card(
+                     shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        ),
                     elevation: 10,
                     margin: EdgeInsets.all(20),
                     child: Padding(

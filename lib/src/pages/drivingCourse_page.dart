@@ -11,6 +11,9 @@ class DrivingCourse extends StatelessWidget {
       controller: _controller,
       children: <Widget>[
         Card(
+                    shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                        ),
                     elevation: 10,
                     margin: EdgeInsets.all(20),
                     child: Padding(
@@ -75,7 +78,11 @@ class DrivingCourse extends StatelessWidget {
 
 
         Card(
-            elevation: 10,
+          shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(20.0)),
+                  ),
+
+          elevation: 10,
             margin: EdgeInsets.all(20),
             child: Padding(
               padding: const EdgeInsets.only(left: 15,right: 15,top: 20),
