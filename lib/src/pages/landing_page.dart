@@ -1,4 +1,4 @@
-import 'package:car_app_test/src/pages/home.dart';
+import 'package:car_app_test/src/pages/login_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,7 +9,7 @@ class LandingPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
           onTap: (){
-            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => MyHomePage()));
+            Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (BuildContext context) => LoginPage()));
           },
           child: Scaffold(
             body: Center(
