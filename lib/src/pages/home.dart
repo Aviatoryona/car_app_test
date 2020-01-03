@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   ScrollController _scrollBottomController = ScrollController();
   bool isScrollingDown = false;
   bool _show = true;
-  double bottomBarHeight = 75;
+  double bottomBarHeight = 55;
   double _bottomBarOffset = 0;
 
   @override
@@ -35,7 +35,7 @@ class _MyHomePageState extends State<MyHomePage> {
   void showBottomBar(){
     setState(() {
      _show =  true; 
-     bottomBarHeight = 75;
+     bottomBarHeight = 55;
     });
   }
   void hideBottomBar(){
@@ -87,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
              child: Text('7 DAYS INTENSIVE COURSE',),
             )
           ],
-          labelColor: Colors.yellow,
+          labelColor: Colors.white,
           unselectedLabelColor: Colors.grey,
           indicatorSize: TabBarIndicatorSize.label,
           indicatorPadding: EdgeInsets.all(5.0),
