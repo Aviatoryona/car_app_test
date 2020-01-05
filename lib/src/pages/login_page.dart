@@ -1,4 +1,5 @@
 import 'package:car_app_test/src/pages/home.dart';
+import 'package:car_app_test/src/pages/register_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatefulWidget {
@@ -108,7 +109,11 @@ class _LoginPageState extends State<LoginPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-              FlatButton(child: Text('Register'),onPressed: (){},)
+              FlatButton(
+                child: Text('Register'),
+                onPressed: (){
+                   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => RegisterPage()));
+                },)
             ],),
             SizedBox(height: 30,),
             Container(height: 30,width: 100,child: Center(child: Text('LOGO HERE')),color: Colors.amber,),
