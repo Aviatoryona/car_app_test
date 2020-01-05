@@ -2,6 +2,7 @@ import 'package:car_app_test/src/pages/7DaysIntensiveCourse_page.dart';
 import 'package:car_app_test/src/pages/drivingCourse_page.dart';
 import 'package:car_app_test/src/pages/hireCar_page.dart';
 import 'package:car_app_test/src/pages/profile_page.dart';
+import 'package:car_app_test/src/pages/schedule_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -232,11 +233,10 @@ class _MyHomePageState extends State<MyHomePage> {
                setState(() {
                currentIndex = k;
                if(k ==0){
-                print('in jobs');
+                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyHomePage()));
                } else if(k == 1){
-                  print('in schedule');
+                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => SchedulePage()));
                }else{
-                 print('in me');
                  Navigator.of(context).push(MaterialPageRoute(builder: (context) => ProfilePage()));
                }
                });
