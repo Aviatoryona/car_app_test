@@ -25,7 +25,6 @@ class _RegisterPageState extends State<RegisterPage> {
               children: <Widget>[
                 
                 ListTile(
-                  dense: true,
                   title: Text('Instructor'),
                   subtitle: Text('Register'),
                   trailing: FlatButton(
