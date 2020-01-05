@@ -13,7 +13,7 @@ class SchedulePage extends StatelessWidget {
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text('Events Schedule'),
+            child: Center(child: Text('Events Schedule',style: TextStyle(fontSize: 25),)),
           ),
           ButtonBar(
             children: <Widget>[
