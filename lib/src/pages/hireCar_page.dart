@@ -89,14 +89,14 @@ class HireCar extends StatelessWidget {
                               FlatButton(
                                 
                                 child: Text('More info...'),
-                                onPressed: (){},
+                                onPressed: (){
+                                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => MoreDetails()));
+                                },
                               ),
                               FlatButton(
                                 color: Colors.amber,
                                 child: Text('Claim job.'),
-                                onPressed: (){
-                                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => MoreDetails()));
-                                },
+                                onPressed: (){},
                                 shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                               )
                             ],
