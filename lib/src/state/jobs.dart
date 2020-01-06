@@ -4,7 +4,7 @@ import 'package:http/http.dart' as http;
 class Jobs{
 // implement some state in this class . 
 
-  var projectUrl = 'www.whateva.com';
+  var projectUrl = 'http://www.whateva.com';
 
 
 
