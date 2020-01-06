@@ -233,7 +233,6 @@ class _MyHomePageState extends State<MyHomePage> {
                setState(() {
                currentIndex = k;
                if(k ==0){
-                 Navigator.of(context).push(MaterialPageRoute(builder: (context) => MyHomePage()));
                } else if(k == 1){
                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => SchedulePage()));
                }else{
