@@ -1,3 +1,4 @@
+import 'package:car_app_test/src/pages/moreDetails_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/rendering.dart';
@@ -93,7 +94,9 @@ class HireCar extends StatelessWidget {
                               FlatButton(
                                 color: Colors.amber,
                                 child: Text('Claim job.'),
-                                onPressed: (){},
+                                onPressed: (){
+                                   Navigator.of(context).push(MaterialPageRoute(builder: (context) => MoreDetails()));
+                                },
                                 shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
                               )
                             ],
@@ -181,7 +184,9 @@ class HireCar extends StatelessWidget {
                               FlatButton(
                                 
                                 child: Text('More info...'),
-                                onPressed: (){},
+                                onPressed: (){
+                                 
+                                },
                               ),
                               FlatButton(
                                 color: Colors.amber,
