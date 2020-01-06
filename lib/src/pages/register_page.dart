@@ -82,9 +82,8 @@ class _RegisterPageState extends State<RegisterPage> {
           )
         ),
         body: Form(
-            child: Padding(
-            padding: const EdgeInsets.only(left: 30,right: 30),
             child: ListView(
+              padding: const EdgeInsets.only(left: 30,right: 30),
               controller: _scrollBottomController,
               children: <Widget>[
                 Text('Personal Details',style: TextStyle(fontSize: 16,color: Colors.pink),),
@@ -241,7 +240,6 @@ class _RegisterPageState extends State<RegisterPage> {
                 
               ],
             ),
-          ),
         ),
     );
   }

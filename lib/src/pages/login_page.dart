@@ -99,56 +99,53 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
+      body: ListView(
         padding: const EdgeInsets.all(18.0),
-        child: ListView(
-          
-          children: <Widget>[
-            SizedBox(height: 10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: <Widget>[
-              FlatButton(
-                child: Text('Register'),
-                onPressed: (){
-                   Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => RegisterPage()));
-                },)
-            ],),
-            SizedBox(height: 30,),
-            Container(height: 30,width: 100,child: Center(child: Text('LOGO HERE')),color: Colors.amber,),
-            Text('You Choose We Connect'),
+        children: <Widget>[
+          SizedBox(height: 10,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: <Widget>[
+            FlatButton(
+              child: Text('Register'),
+              onPressed: (){
+                 Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => RegisterPage()));
+              },)
+          ],),
+          SizedBox(height: 30,),
+          Container(height: 30,width: 100,child: Center(child: Text('LOGO HERE')),color: Colors.amber,),
+          Text('You Choose We Connect'),
 
-            SizedBox(height: 10,),
-            ListTile(
-              title: Text('Instructor',style: TextStyle(fontSize: 20),),
-              subtitle: Text('Welcome back'),
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Text('Login Now'),
-            ),
-            SizedBox(height: 20,),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: Container(
-                child: Form(
-                  key: _formKey,
-                  child: Column(
-                    children: <Widget>[
-                      buildEmailFormField(),
-                      SizedBox(height: 10,),
-                      buildPasswordFormField(context),
-                      SizedBox(height: 10,),
-                      buildForgotPassword(),
-                      SizedBox(height: 10,),
-                      buildLoginButton(context)
-                    ],
-                  ),
+          SizedBox(height: 10,),
+          ListTile(
+            title: Text('Instructor',style: TextStyle(fontSize: 20),),
+            subtitle: Text('Welcome back'),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Text('Login Now'),
+          ),
+          SizedBox(height: 20,),
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Container(
+              child: Form(
+                key: _formKey,
+                child: Column(
+                  children: <Widget>[
+                    buildEmailFormField(),
+                    SizedBox(height: 10,),
+                    buildPasswordFormField(context),
+                    SizedBox(height: 10,),
+                    buildForgotPassword(),
+                    SizedBox(height: 10,),
+                    buildLoginButton(context)
+                  ],
                 ),
               ),
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

@@ -21,97 +21,98 @@ class _MoreDetailsState extends State<MoreDetails> {
               ),
               backgroundColor: Colors.white,
               actions: <Widget>[],
-              expandedHeight: 300.0,
-              floating: false,
+              expandedHeight: MediaQuery.of(context).size.height/2,
+              floating: true,
               pinned: true,
               flexibleSpace:FlexibleSpaceBar(
-                background: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: ListView(
-                        children: <Widget>[
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              CircleAvatar(backgroundColor: Colors.pink,child: Text('₤'),),
-                              SizedBox(width: 5,),
-                              Text("1821",textAlign: TextAlign.left,
-                              style: TextStyle(color: Colors.pink,fontSize: 20,fontWeight: FontWeight.w700),),
-                            ],
-                          ),
-                          SizedBox(height: 10,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              Expanded(child: Text('Driving Test Center')),
-                              Expanded(child: Text('Aberdeen Ab123gq UK',style: TextStyle(fontWeight: FontWeight.w800),))
-                            ],
-                          ),
-                          SizedBox(height: 10,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              Expanded(child: Text('Test Date',textAlign: TextAlign.left,),flex: 2,),
-                              Expanded(child: Text('2020-19-11',style: TextStyle(fontWeight: FontWeight.w800),))
-                            ],
-                          ),
-                          SizedBox(height: 10,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              Expanded(child: Text('Test Time',textAlign: TextAlign.left,),flex: 2,),
-                              Expanded(child: Text('00-11-01',style: TextStyle(fontWeight: FontWeight.w800),))
-                            ],
-                          ),
-                          SizedBox(height: 10,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              Expanded(child: Text('Transmision',textAlign: TextAlign.left,),flex: 2,),
-                              Expanded(child: Text('Manual',style: TextStyle(fontWeight: FontWeight.w800),),flex: 1,)
-                            ],
-                          ),
-                          SizedBox(height: 10,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              Expanded(child: Text('Distance (from pickup address)',textAlign: TextAlign.left,),flex: 2,),
-                              Expanded(child: Text('3.37 miles',style: TextStyle(fontWeight: FontWeight.w800),),flex: 1,)
-                            ],
-                          ),
-                          SizedBox(height: 10,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              Expanded(child: Text('Pick up address',textAlign: TextAlign.left,),flex: 2,),
-                              Expanded(child: Text('HAO 2FN',style: TextStyle(fontWeight: FontWeight.w800),))
-                            ],
-                          ),
-                          SizedBox(height: 10,),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: <Widget>[
-                              Expanded(child: Text('Driving history',textAlign: TextAlign.left,
-                              style: TextStyle(color: Colors.pink,fontSize: 17),
-                              ),flex: 2,),
-                              Expanded(child: Text('I have had 7 driving lessons, i havent taken tests before'
-                              ,style: TextStyle(fontWeight: FontWeight.w800),))
-                            ],
-                          ),
-                          ButtonBar(
-                            
-                            alignment: MainAxisAlignment.end,
-                            children: <Widget>[
-                              FlatButton(
-                                color: Colors.amber,
-                                child: Text('Claim job.'),
-                                onPressed: (){},
-                                shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-                              )
-                            ],
-                          )
-                        ],
-                      ),
-                ),
+                // centerTitle: true,
+                // title: Text('details',style: TextStyle(color: Colors.black),),
+                collapseMode: CollapseMode.parallax,
+                background: ListView(
+                  padding: EdgeInsets.only(top:60,left: 10,right: 10),
+                      children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            CircleAvatar(backgroundColor: Colors.pink,child: Text('₤'),),
+                            SizedBox(width: 5,),
+                            Text("1821",textAlign: TextAlign.left,
+                            style: TextStyle(color: Colors.pink,fontSize: 20,fontWeight: FontWeight.w700),),
+                          ],
+                        ),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Expanded(child: Text('Driving Test Center')),
+                            Expanded(child: Text('Aberdeen Ab123gq UK',style: TextStyle(fontWeight: FontWeight.w800),))
+                          ],
+                        ),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Expanded(child: Text('Test Date',textAlign: TextAlign.left,),flex: 2,),
+                            Expanded(child: Text('2020-19-11',style: TextStyle(fontWeight: FontWeight.w800),))
+                          ],
+                        ),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Expanded(child: Text('Test Time',textAlign: TextAlign.left,),flex: 2,),
+                            Expanded(child: Text('00-11-01',style: TextStyle(fontWeight: FontWeight.w800),))
+                          ],
+                        ),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Expanded(child: Text('Transmision',textAlign: TextAlign.left,),flex: 2,),
+                            Expanded(child: Text('Manual',style: TextStyle(fontWeight: FontWeight.w800),),flex: 1,)
+                          ],
+                        ),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Expanded(child: Text('Distance (from pickup address)',textAlign: TextAlign.left,),flex: 2,),
+                            Expanded(child: Text('3.37 miles',style: TextStyle(fontWeight: FontWeight.w800),),flex: 1,)
+                          ],
+                        ),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Expanded(child: Text('Pick up address',textAlign: TextAlign.left,),flex: 2,),
+                            Expanded(child: Text('HAO 2FN',style: TextStyle(fontWeight: FontWeight.w800),))
+                          ],
+                        ),
+                        SizedBox(height: 10,),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: <Widget>[
+                            Expanded(child: Text('Driving history',textAlign: TextAlign.left,
+                            style: TextStyle(color: Colors.pink,fontSize: 17),
+                            ),flex: 1,),
+                            Expanded(child: Text('I have had 7 driving lessons, i havent taken tests before, i havent taken tests before'
+                            ,style: TextStyle(fontWeight: FontWeight.w800),))
+                          ],
+                        ),
+                        ButtonBar(
+                          
+                          alignment: MainAxisAlignment.end,
+                          children: <Widget>[
+                            FlatButton(
+                              color: Colors.amber,
+                              child: Text('Claim job.'),
+                              onPressed: (){},
+                              shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+                            )
+                          ],
+                        )
+                      ],
+                    ),
               )
             ),
            
