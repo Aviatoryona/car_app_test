@@ -1,5 +1,6 @@
 import 'package:car_app_test/src/pages/login_page.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class RegisterPage extends StatefulWidget {
   RegisterPage({Key key}) : super(key: key);
@@ -8,12 +9,54 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+ double elevation = 0.0;
+ ScrollController _scrollBottomController = ScrollController();
+   @override
+  void initState() { 
+    super.initState();
+    myScroll();
+    
+    
+  }
+  @override
+  void dispose() { 
+    _scrollBottomController.removeListener((){});
+    super.dispose();
+  }
+
+  void hideElevation(){
+    setState(() {
+     
+    elevation = 0;
+    });
+  }
+  void showElevation(){
+    setState(() {
+     elevation = 4.0;
+    });
+  }
+
+  void myScroll() async{
+    _scrollBottomController.addListener((){
+     if(_scrollBottomController.position.userScrollDirection == ScrollDirection.reverse){
+        showElevation();
+     }
+     if(_scrollBottomController.position.userScrollDirection == ScrollDirection.forward){
+       showElevation();
+     }
+
+     if(_scrollBottomController.position.atEdge ){
+       hideElevation();
+     }
+    });
+  }
   final _formKey = GlobalKey<FormState>();
   String _firstName,_lastName,_email,_phone,_address,_postCode,_password;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        elevation: elevation,
         backgroundColor: Colors.white,
           title: Text('logo here',style: TextStyle(color: Colors.black),),
           bottom: PreferredSize(
@@ -29,7 +72,9 @@ class _RegisterPageState extends State<RegisterPage> {
                   subtitle: Text('Register'),
                   trailing: FlatButton(
                     child: Text('I Have An account, Login',style: TextStyle(fontSize: 12),),
-                    onPressed: (){},
+                    onPressed: (){
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(builder:(context) =>LoginPage()));
+                    },
                   ),
                 )
               ],
@@ -40,6 +85,7 @@ class _RegisterPageState extends State<RegisterPage> {
             child: Padding(
             padding: const EdgeInsets.only(left: 30,right: 30),
             child: ListView(
+              controller: _scrollBottomController,
               children: <Widget>[
                 Text('Personal Details',style: TextStyle(fontSize: 16,color: Colors.pink),),
                 Row(
