@@ -16,6 +16,7 @@ class SchedulePage extends StatelessWidget {
             child: Center(child: Text('Events Schedule',style: TextStyle(fontSize: 25),)),
           ),
           ButtonBar(
+            alignment: MainAxisAlignment.center,
             children: <Widget>[
               FlatButton(
                 child: Text('PAST'),
