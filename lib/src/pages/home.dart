@@ -15,7 +15,6 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 
-  bool _showAppBar = true;
   ScrollController _scrollBottomController = ScrollController();
   bool isScrollingDown = false;
   bool _show = true;
@@ -53,16 +52,17 @@ class _MyHomePageState extends State<MyHomePage> {
      if(_scrollBottomController.position.userScrollDirection == ScrollDirection.reverse){
         if(!isScrollingDown){
         isScrollingDown = true;
-        _showAppBar = false;
         hideBottomBar();
       }
      }
      if(_scrollBottomController.position.userScrollDirection == ScrollDirection.forward){
         if(isScrollingDown){
         isScrollingDown = false;
-        _showAppBar = true;
         showBottomBar();
       }
+     }
+     if(_scrollBottomController.position.atEdge ){
+       showBottomBar();
      }
     });
   }
@@ -78,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
           elevation: 10,
           title: Text('New Jobs'),
-          bottom: _showAppBar ?TabBar(
+          bottom:TabBar(
           tabs: <Widget>[
             Tab(
               child: Text('HIRE A CAR',style: TextStyle(fontSize: 12),),
@@ -96,9 +96,7 @@ class _MyHomePageState extends State<MyHomePage> {
           indicatorPadding: EdgeInsets.all(5.0),
           indicatorColor: Colors.transparent,
           
-        ): PreferredSize(
-          child: Container(), 
-          preferredSize: Size(0.0,0.0),),
+        ),
         actions: <Widget>[
           IconButton(
             icon: Icon(Icons.share),
